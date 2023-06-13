@@ -63,7 +63,7 @@ const Blog = () => {
               style={{
                 color: secondaryColor,
                 lineHeight: 1.5,
-                marginBottom: 5,
+                marginBottom: 10,
               }}>
               {para}
             </Text>
