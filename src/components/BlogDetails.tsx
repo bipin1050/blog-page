@@ -55,6 +55,13 @@ const Blog = () => {
             By {state.blog.author}
           </Text>
         </Group>
+        <Group
+          position="apart"
+          style={{ marginBottom: 5, marginTop: theme.spacing.sm }}>
+          <Text weight={500} size={18}>
+            Published on {state.blog.date.slice(0,10)}
+          </Text>
+        </Group>
         {state.blog.content.map((para: string, idx: number) => {
           return (
             <Text
