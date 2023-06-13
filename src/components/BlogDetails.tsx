@@ -60,7 +60,11 @@ const Blog = () => {
             <Text
               key={idx}
               size="lg"
-              style={{ color: secondaryColor, lineHeight: 1.5 }}>
+              style={{
+                color: secondaryColor,
+                lineHeight: 1.5,
+                marginBottom: 5,
+              }}>
               {para}
             </Text>
           );
