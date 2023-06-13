@@ -33,22 +33,24 @@ const AddBlogs: React.FC = () => {
   const handleAddBlog = () => {
     const date = new Date();
     setBlog((prevBlog) => ({ ...prevBlog, date: date }));
-    axios.post("http://localhost:8000/blog/addblog", {
-        blog
-    }).then((res)=>{
-        console.log(res)
+    axios
+      .post("https://famous-undershirt-colt.cyclic.app/blog/addblog", {
+        blog,
+      })
+      .then((res) => {
+        console.log(res);
         toast("Blog added successfully");
         setBlog({
-            author: '',
-            date: new Date(),
-            title: '',
-            content: [''],
+          author: "",
+          date: new Date(),
+          title: "",
+          content: [""],
         });
-
-    }).catch((err)=>{
+      })
+      .catch((err) => {
         toast.error(err.message);
-        console.log(err.message)
-    })
+        console.log(err.message);
+      });
   };
 
   return (

@@ -25,7 +25,7 @@ const Blog = () => {
   const handleBlogDelete = (id: String) => {
     window.confirm("Confirm Delete this blog?") &&
       axios
-        .post("http://localhost:8000/blog/delblog", {
+        .post("https://famous-undershirt-colt.cyclic.app/blog/delblog", {
           delid: id,
         })
         .then((res) => {
@@ -85,7 +85,7 @@ const SideBar = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/blog/viewfewblog")
+      .get("https://famous-undershirt-colt.cyclic.app/blog/viewfewblog")
       .then((res) => {
         console.log(res.data.blogList);
         setBlogs(res.data.blogList);

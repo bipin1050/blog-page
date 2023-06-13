@@ -8,7 +8,7 @@ const HomePage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/blog/viewblog")
+      .get("https://famous-undershirt-colt.cyclic.app/blog/viewblog")
       .then((res) => {
         console.log(res.data.blogList);
         setBlogs(res.data.blogList);
