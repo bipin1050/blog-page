@@ -77,7 +77,7 @@ const Blog = () => {
           );
         })}
         {console.log(state.blog)}
-        <Button
+        {/* <Button
           variant="light"
           color="grape"
           style={{ marginTop: 14 }}
@@ -85,7 +85,7 @@ const Blog = () => {
             handleBlogDelete(state.blog._id);
           }}>
           Delete Blog
-        </Button>
+        </Button> */}
       </Card>
     </div>
   );
