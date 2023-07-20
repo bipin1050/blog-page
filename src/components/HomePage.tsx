@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import BlogCard from "./BlogCard";
 import Loading from "./Loading";
+import { baseURL } from "./baseURL";
 
 const HomePage = () => {
   const [blogs, setBlogs] = useState<[]>([]);
 
   useEffect(() => {
     axios
-      .get("https://lime-agile-bonobo.cyclic.app/blog/viewblog")
+      .get(baseURL + "blog/viewblog")
       .then((res) => {
         console.log(res.data.blogList);
         setBlogs(res.data.blogList);

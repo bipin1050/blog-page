@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { toast } from "react-toastify";
+import { baseURL } from './baseURL';
 
 const AddBlogs: React.FC = () => {
   const [blog, setBlog] = useState({
@@ -34,7 +35,7 @@ const AddBlogs: React.FC = () => {
     const date = new Date();
     setBlog((prevBlog) => ({ ...prevBlog, date: date }));
     axios
-      .post("https://lime-agile-bonobo.cyclic.app/blog/addblog", {
+      .post(baseURL + "blog/addblog", {
         blog,
       })
       .then((res) => {

@@ -13,6 +13,7 @@ import BlogCard from "./BlogCard";
 import Loading from "./Loading";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { baseURL } from "./baseURL";
 
 const Blog = () => {
   const theme = useMantineTheme();
@@ -25,7 +26,7 @@ const Blog = () => {
   const handleBlogDelete = (id: String) => {
     window.confirm("Confirm Delete this blog?") &&
       axios
-        .post("https://lime-agile-bonobo.cyclic.app/blog/delblog", {
+        .post(baseURL + "blog/delblog", {
           delid: id,
         })
         .then((res) => {
@@ -96,7 +97,7 @@ const SideBar = () => {
 
   useEffect(() => {
     axios
-      .get("https://lime-agile-bonobo.cyclic.app/blog/viewfewblog")
+      .get(baseURL + "blog/viewfewblog")
       .then((res) => {
         console.log(res.data.blogList);
         setBlogs(res.data.blogList);
