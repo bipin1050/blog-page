@@ -25,7 +25,7 @@ const Blog = () => {
   const handleBlogDelete = (id: String) => {
     window.confirm("Confirm Delete this blog?") &&
       axios
-        .post("https://famous-undershirt-colt.cyclic.app/blog/delblog", {
+        .post("https://lime-agile-bonobo.cyclic.app/blog/delblog", {
           delid: id,
         })
         .then((res) => {

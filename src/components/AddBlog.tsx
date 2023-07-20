@@ -34,7 +34,7 @@ const AddBlogs: React.FC = () => {
     const date = new Date();
     setBlog((prevBlog) => ({ ...prevBlog, date: date }));
     axios
-      .post("https://famous-undershirt-colt.cyclic.app/blog/addblog", {
+      .post("https://lime-agile-bonobo.cyclic.app/blog/addblog", {
         blog,
       })
       .then((res) => {
