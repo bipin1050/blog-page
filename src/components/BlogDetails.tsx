@@ -96,7 +96,7 @@ const SideBar = () => {
 
   useEffect(() => {
     axios
-      .get("https://famous-undershirt-colt.cyclic.app/blog/viewfewblog")
+      .get("https://lime-agile-bonobo.cyclic.app/blog/viewfewblog")
       .then((res) => {
         console.log(res.data.blogList);
         setBlogs(res.data.blogList);
